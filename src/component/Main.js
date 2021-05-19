@@ -6,24 +6,29 @@ import { AuthProvider } from '../context/AuthContext'
 import PrivateRoute from '../PrivateRoute'
 import SignUp from '../Pages/SignUp'
 import forgotPassword from '../Pages/forgotPassword'
-import Dashboard from '../Pages/Dashboard'
+import Dashboard from '../Pages/dashboard/Dashboard'
 import UpdateProfile from '../Pages/UpdateProfile'
+import { Background,BcgContainer } from '../Background'
+import bcg from '../assets/bcg.svg'
 
 const Main = () => {
     return (
-            <MainContainer>
                 <Router>
                     <AuthProvider>
                         <Switch>
                             <PrivateRoute exact path='/' component={Dashboard} />
                             <PrivateRoute path='/update-profile' component={UpdateProfile} />
-                            <Route path='/login' component={FormContainer} />
-                            <Route path='/sign-up' component={SignUp} />
-                            <Route path='/forgot-password' component={forgotPassword} />
+                            <BcgContainer>
+                                <Background src={bcg} />
+                            <MainContainer>
+                                <Route path='/Login' component={FormContainer} />
+                                <Route path='/sign-up' component={SignUp} />
+                                <Route path='/forgot-password' component={forgotPassword} />
+                            </MainContainer>
+                            </BcgContainer>
                         </Switch>
                     </AuthProvider>
-                </Router>
-            </MainContainer>  
+                </Router>            
     )
 }
 
