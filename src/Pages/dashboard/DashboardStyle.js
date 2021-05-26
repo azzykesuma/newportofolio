@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { TiThMenu } from 'react-icons/ti'
+import { Link } from 'react-router-dom'
 
 export const Header = styled.div`
     background-color : blueviolet;
@@ -26,7 +27,8 @@ export const Nav = styled.nav`
     grid-column-gap : 10px;
 `
 
-export const Title = styled.li`
+export const Title = styled(Link)`
+    text-decoration : none;
     background-color : transparent;
     color : burlywood;
     list-style : none;
@@ -77,4 +79,7 @@ export const CardContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     justify-items : center;
     grid-gap : 8rem;
+`
+export const ServiceMain = styled.div`
+    
 `

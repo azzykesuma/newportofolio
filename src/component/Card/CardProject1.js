@@ -19,9 +19,9 @@ const CardProject = () => {
                 <Description>'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'</Description>
                 <TechInfo>TechStack</TechInfo>
                 <TechStack>
-                    <TechList>1</TechList>
-                    <TechList>2</TechList>
-                    <TechList>3</TechList>
+                    <TechList>HTML</TechList>
+                    <TechList>CSS</TechList>
+                    <TechList>JAVASCRIPT</TechList>
                 </TechStack>
                 <Rate>Difficulty : Medium</Rate>
         </CardContainer>
